@@ -17,7 +17,7 @@ async function getRandomPokemon() {
     const pokemonList = jsonData.results
 
     const randomIndex = Math.floor(Math.random() * pokemonList.length)
-    const randomPokemon = pokemonList[randomIndex]
+    const randomPokemon = pokemonList.at(randomIndex)
 
     // output
     document.getElementById("result").innerHTML = "<p>" + randomPokemon.name + "</p>"
